@@ -41,7 +41,7 @@ class MNISTModel(L.LightningModule):
         self.log("test_acc_epoch", self.accuracy.compute())
 
     def configure_optimizers(self):
-        return torch.optim.Adam(self.parameters(), lr=0.02)
+        return torch.optim.Adam(self.parameters(), lr=0.001)
 
 
 # Init our model
