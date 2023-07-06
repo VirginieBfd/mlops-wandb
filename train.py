@@ -7,6 +7,7 @@ from torch.utils.data import DataLoader
 from torchvision import transforms
 from torchvision.datasets import MNIST
 import torchmetrics
+from pytorch_lightning.loggers import WandbLogger
 
 
 PATH_DATASETS = os.environ.get("PATH_DATASETS", ".")
@@ -57,10 +58,12 @@ train_loader = DataLoader(train_ds, batch_size=BATCH_SIZE)
 val_loader = DataLoader(val_ds, batch_size=BATCH_SIZE, shuffle=False)
 
 # Initialize a trainer
+wandb_logger = WandbLogger(project='mlops-wandb')
 trainer = L.Trainer(
     accelerator="auto",
     devices=1,
     max_epochs=3,
+    logger=wandb_logger,
 )
 
 # Train the model ⚡
