@@ -10,4 +10,8 @@ dependencies:
   - conda-content-trust
   - python.app
   - wandb
+  - torchaudio
+  - torchvision
+  - pytorch::pytorch
+  - pytorch-lightning
 prefix: /opt/homebrew/Caskroom/miniconda/base
