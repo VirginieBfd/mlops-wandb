@@ -1,17 +1,9 @@
-name: base
+name: mlops-wandb
 channels:
   - defaults
 dependencies:
-  - python=3.10
-  - conda==23.3.1
-  - setuptools
-  - pip
-  - wheel
-  - conda-content-trust
-  - python.app
-  - wandb
-  - torchaudio
+  - pytorch
   - torchvision
-  - pytorch::pytorch
   - pytorch-lightning
-prefix: /opt/homebrew/Caskroom/miniconda/base
+  - lightning
+prefix: /Users/virginie/miniconda3/envs/mlops-wandb
