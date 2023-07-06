@@ -6,4 +6,5 @@ dependencies:
   - torchvision
   - pytorch-lightning
   - lightning
+  - wandb
 prefix: /Users/virginie/miniconda3/envs/mlops-wandb
